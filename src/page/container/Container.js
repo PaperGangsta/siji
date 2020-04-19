@@ -6,6 +6,8 @@ import Activity from '../activity/Activity';
 import Advisory from '../advisory/Advisory';
 import './style.less';
 import LeftNav from '../../component/left-nav/LeftNav';
+import {Tag} from 'antd';
+import {imgIndex} from '../../api/config';
 
 class Container extends Component {
 
@@ -89,8 +91,24 @@ class Container extends Component {
 
             <div className='main-item'>
               <div className='main-title'><span>会场掠影</span></div>
-              <div className='main-title-second'>Tips : 点击照片查看摘要哦~</div>
-
+              <div className='main-title-second'>
+                <Tag color="green">Tips : 点击照片查看摘要哦~</Tag>
+              </div>
+              <div className='main-text-wrapper'>
+                {imgIndex.map((item, index) => {
+                  return (
+                    <div className='main-img-wrapper' key={item.img}>
+                      <div className='main-img'>
+                        <img src={require(`../../assets/img/${item.img}.jpg`)} alt='会场图片'/>
+                      </div>
+                      <div className='main-img-detail'>
+                        <span className='main-img-detail-item iconfont'>&#xe62b;</span>
+                        <span className='main-img-detail-item'>{item.detail}</span>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
 
           </div>
@@ -107,7 +125,8 @@ class Container extends Component {
           {/*  </div>*/}
           {/*</div>*/}
         </div>
-        {this.state.navShow === true ? <div className='shadow-wrapper shadow-wrapper-visible'/> :
+        {this.state.navShow === true ?
+          <div onClick={() => this.changeNavShow()} className='shadow-wrapper shadow-wrapper-visible'/> :
           <div className='shadow-wrapper'/>}
       </div>
 
