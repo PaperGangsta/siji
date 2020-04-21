@@ -40,4 +40,9 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  <script>
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+      console.log('WeixinJSBridgeReady');
+      WeixinJSBridge.call('hideToolbar');
+    });</script>
 </html>

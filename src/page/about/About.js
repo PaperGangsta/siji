@@ -1,59 +1,23 @@
 import React, {Component} from 'react';
-import Header from '../../component/header/Header';
-import {Redirect, Route, Switch, NavLink} from 'react-router-dom';
-import Home from '../home/Home';
-import Activity from '../activity/Activity';
-import Advisory from '../advisory/Advisory';
 import './style.less';
-import LeftNav from '../../component/left-nav/LeftNav';
 import {Tag} from 'antd';
 import {imgIndex} from '../../api/config';
 
-class Container extends Component {
 
-  state = {
-    navShow: false
-  };
+class About extends Component {
 
-  changeNavShow = () => {
-    if (this.state.navShow) {
-      this.setState({
-        navShow: false
-      });
-    } else {
-      this.setState({
-        navShow: true
-      });
-    }
-  };
 
   render() {
-    let title = '主培项目';
-    switch (this.props.location.pathname) {
-      case '/home':
-        title = '主培项目';
-        break;
-      case '/activity':
-        title = '最近活动';
-        break;
-      case '/advisory':
-        title = '热心问答';
-        break;
-      default:
-        title = '主培项目';
-    }
     return (
-      <div className='container-wrapper'>
-        <Header changeNavShow={this.changeNavShow}/>
-        <LeftNav navShow={this.state.navShow} changeNavShow={this.changeNavShow}/>
-        <div className='container-body'>
+      <div className='about-wrapper'>
+        <div className='about-body'>
           {/*<div className='tab'>*/}
           {/*  <NavLink to="/home" activeClassName="selected"><div className='tab-item' ><span > 联盟空间 </span></div></NavLink>*/}
           {/*  <NavLink to="/activity" activeClassName="selected"><div className='tab-item'><span > 精彩活动 </span></div></NavLink>*/}
           {/*  <NavLink to="/advisory" activeClassName="selected"><div className='tab-item'><span> 教育咨询 </span></div></NavLink>*/}
           {/*</div>*/}
-          {/*<div className='container-title'>*/}
-          {/*  <span className='container-title-item'>{title}</span>*/}
+          {/*<div className='about-title'>*/}
+          {/*  <span className='about-title-item'>{title}</span>*/}
           {/*</div>*/}
           {/*<Switch>*/}
           {/*  <Route path='/home' component={Home}/>*/}
@@ -61,18 +25,18 @@ class Container extends Component {
           {/*  <Route path='/advisory' component={Advisory}/>*/}
           {/*  <Redirect from='/' exact to='/home'/>*/}
           {/*</Switch>*/}
-          <div className='container-body-title'>
-            <div className='container-title-img'>
-              <img src={require('../../assets/img/logo.png')}/>
+          <div className='about-body-title'>
+            <div className='about-title-img'>
+              <img src={require('../../assets/img/logo_wuzi.png')} alt='logo'/>
             </div>
-            <div className='container-title-text'>
-              <p className='container-title-text-item'>四季惠享公益联盟</p>
+            <div className='about-title-text'>
+              <p className='about-title-text-item'>四季惠享公益联盟</p>
             </div>
           </div>
 
           <div className='split-line'/>
 
-          <div className='container-main'>
+          <div className='about-main'>
             <div className='main-item'>
               <div className='main-title'><span>会议召开</span></div>
               <div className='main-text-wrapper'>
@@ -92,7 +56,7 @@ class Container extends Component {
             <div className='main-item'>
               <div className='main-title'><span>会场掠影</span></div>
               <div className='main-title-second'>
-                <Tag color="green">Tips : 点击照片查看摘要哦~</Tag>
+                <Tag color="green">Tips : 精彩的现在重现给你~</Tag>
               </div>
               <div className='main-text-wrapper'>
                 {imgIndex.map((item, index) => {
@@ -111,27 +75,19 @@ class Container extends Component {
               </div>
             </div>
 
+            <div className='main-item'>
+              <div className='main-title'><span>惠享·未来</span></div>
+              <div className='main-text-wrapper'>
+                <p>四季惠享公益联盟成立后，将成为政府和广大校外培训机构之间的桥梁纽带，发挥服务、协调、监督作用，推动行业自律，优化市场环境，提供优质服务。</p>
+                <p>联盟也是四季青街道辖区内各校外培训机构的共同家园，联盟在协助街道完成监督规范办学的同时，也将努力为机构提供有益的指导，共建发展的平台。</p>
+              </div>
+            </div>
+
           </div>
         </div>
-        <div className='container-foot'>
-          {/*<div className='container-logo'>*/}
-          {/*  <div className='logo-item'>*/}
-          {/*    <img  src={require('../../assets/img/siji_logo.jpg')}/>*/}
-          {/*  </div>*/}
-          {/*</div>*/}
-          {/*<div className='container-logo'>*/}
-          {/*  <div className='logo-item'>*/}
-          {/*    <img  src={require('../../assets/img/siji_logo.jpg')}/>*/}
-          {/*  </div>*/}
-          {/*</div>*/}
-        </div>
-        {this.state.navShow === true ?
-          <div onClick={() => this.changeNavShow()} className='shadow-wrapper shadow-wrapper-visible'/> :
-          <div className='shadow-wrapper'/>}
       </div>
-
     );
   }
 }
 
-export default Container;
+export default About;
