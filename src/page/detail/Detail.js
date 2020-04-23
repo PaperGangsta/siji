@@ -7,11 +7,6 @@ class Detail extends Component {
   render() {
     return (
       <div className='detail-wrapper'>
-        <NavLink to='/activity'>
-          <div className='detail-back'>
-            <span>&lt;&lt;</span>
-          </div>
-        </NavLink>
         <div className='detail-title'>
           <h2>公益课程·剪纸</h2>
         </div>

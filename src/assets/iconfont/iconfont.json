@@ -6,6 +6,41 @@
   "description": "learn of Travel imooc",
   "glyphs": [
     {
+      "icon_id": "1290025",
+      "name": "常见问题",
+      "font_class": "changjianwenti",
+      "unicode": "e6cb",
+      "unicode_decimal": 59083
+    },
+    {
+      "icon_id": "5532911",
+      "name": "意见反馈",
+      "font_class": "yijianfankui",
+      "unicode": "e63b",
+      "unicode_decimal": 58939
+    },
+    {
+      "icon_id": "10622565",
+      "name": "聊天",
+      "font_class": "dilanxianxingiconyihuifu_huabanfuben",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "594373",
+      "name": "活动",
+      "font_class": "huodong1",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
+      "icon_id": "714393",
+      "name": "活动",
+      "font_class": "icon",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
       "icon_id": "7826085",
       "name": "close",
       "font_class": "baseline-close-px",

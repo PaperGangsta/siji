@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './style.less';
 import {Tag} from 'antd';
 import {imgIndex} from '../../api/config';
+import CommonFooter from '../../component/common-footer/CommonFooter';
 
 
 class About extends Component {
@@ -33,9 +34,6 @@ class About extends Component {
               <p className='about-title-text-item'>四季惠享公益联盟</p>
             </div>
           </div>
-
-          <div className='split-line'/>
-
           <div className='about-main'>
             <div className='main-item'>
               <div className='main-title'><span>会议召开</span></div>
@@ -85,6 +83,7 @@ class About extends Component {
 
           </div>
         </div>
+        <CommonFooter/>
       </div>
     );
   }

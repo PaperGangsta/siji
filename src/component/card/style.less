@@ -1,6 +1,8 @@
 .card-wrapper {
   border-radius: .2rem;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, .1);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, .1),
+    0px -5px 5px rgba(0, 0, 0, .1);
+
   background: white;
   width: 92%;
   margin: 0 auto .3rem;
@@ -54,10 +56,9 @@
     }
 
     .card-item-btn {
+      float: right;
       padding: .15rem .3rem;
-      background: #f1c40f;
       border-radius: .1rem;
-      align-self: flex-end;
       color: #ecf0f1;
       letter-spacing: 2px;
       font-weight: bold;
@@ -71,7 +72,7 @@
 
   .card-item-time {
     font-size: 13px;
-    color: rgba(0,0,0,0.65);
+    color: rgba(0, 0, 0, 0.65);
     letter-spacing: 1px;
     position: absolute;
     bottom: 0;

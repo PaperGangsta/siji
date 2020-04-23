@@ -37,7 +37,8 @@ class FooterNav extends Component {
             <NavLink to='/'>
               <div className='footer-nav-list-label'><span>联盟简介</span></div>
             </NavLink>
-          </div>)}
+          </div>)
+          }
         </div>
 
         <div className='footer-nav-item' onClick={() => this.changeShowList(2)}>
@@ -47,14 +48,16 @@ class FooterNav extends Component {
               活动内容
             </div>
           </div>
-          {this.state.showList === 2 && (<div className='footer-nav-list'>
-            <NavLink to='/'>
-              <div className='footer-nav-list-label'><span>历史活动</span></div>
-            </NavLink>
-            <NavLink to='/'>
-              <div className='footer-nav-list-label'><span>精彩活动</span></div>
-            </NavLink>
-          </div>)}
+          {this.state.showList === 2 && (
+            <div className='footer-nav-list'>
+              <NavLink to='/'>
+                <div className='footer-nav-list-label'><span>历史活动</span></div>
+              </NavLink>
+              <NavLink to='/activity'>
+                <div className='footer-nav-list-label'><span>精彩活动</span></div>
+              </NavLink>
+            </div>)
+          }
         </div>
 
         <div className='footer-nav-item' onClick={() => this.changeShowList(3)}>
@@ -75,8 +78,8 @@ class FooterNav extends Component {
               <div className='footer-nav-list-label'><span>意见箱</span></div>
             </NavLink>
           </div>)}
-
         </div>
+
       </div>
     );
   }
