@@ -31,7 +31,7 @@ class FooterNav extends Component {
             </div>
           </div>
           {this.state.showList === 1 && (<div className='footer-nav-list'>
-            <NavLink to='/'>
+            <NavLink to='/term'>
               <div className='footer-nav-list-label'><span>主培项目</span></div>
             </NavLink>
             <NavLink to='/'>
@@ -50,7 +50,7 @@ class FooterNav extends Component {
           </div>
           {this.state.showList === 2 && (
             <div className='footer-nav-list'>
-              <NavLink to='/'>
+              <NavLink to='/history'>
                 <div className='footer-nav-list-label'><span>历史活动</span></div>
               </NavLink>
               <NavLink to='/activity'>
@@ -68,13 +68,13 @@ class FooterNav extends Component {
             </div>
           </div>
           {this.state.showList === 3 && (<div className='footer-nav-list'>
-            <NavLink to='/'>
+            <NavLink to='/question'>
               <div className='footer-nav-list-label'><span>常见问题</span></div>
             </NavLink>
-            <NavLink to='/'>
+            <NavLink to='/oneToOne'>
               <div className='footer-nav-list-label'><span>一对一咨询</span></div>
             </NavLink>
-            <NavLink to='/'>
+            <NavLink to='/opinion'>
               <div className='footer-nav-list-label'><span>意见箱</span></div>
             </NavLink>
           </div>)}

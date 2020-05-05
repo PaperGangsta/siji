@@ -36,7 +36,7 @@ class Card extends Component {
           </div>
 
           <div className='card-item-detail'>
-            <span className='card-detail-item'>江干区教大家剪纸江干区教大家剪纸江干区教大家剪纸江干区教大家剪纸江干区教大家剪纸</span>
+            <span className='card-detail-item'>江干区教大家剪纸江干区教大家剪纸江干区教大家剪纸江干区教大家剪纸江干区教大家剪纸江干区教大家剪纸江干区教大家剪纸江干区教大家</span>
           </div>
           <Link to={`/${this.type}/1`}>
             <div className='card-item-btn' style={bgColor}>

@@ -4,9 +4,22 @@ import {NavLink} from 'react-router-dom';
 import RegisterForm from '../../component/register-form/RegisterForm';
 
 class Detail extends Component {
+
+  constructor(props) {
+    super(props);
+  }
+
   render() {
+    let index = this.props.match.path;
+    let style;
+    index = index.split('/')[1];
+    if (index === 'history') {
+      style = {marginBottom: '1rem'};
+    } else {
+      style = {marginBottom: '0.5rem'};
+    }
     return (
-      <div className='detail-wrapper'>
+      <div className='detail-wrapper' style={style}>
         <div className='detail-title'>
           <h2>公益课程·剪纸</h2>
         </div>
@@ -23,12 +36,13 @@ class Detail extends Component {
             <span className='detail-time'>2020-04-16</span>
           </div>
         </div>
-        <div className='detail-register'>
+        {index === 'activity' && (<div className='detail-register'>
           <div className='detail-register-title'>
             活动报名
           </div>
           <RegisterForm/>
-        </div>
+        </div>)}
+
       </div>
     );
   }

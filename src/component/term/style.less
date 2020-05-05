@@ -1,0 +1,35 @@
+.term-wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 45px 0;
+
+  .term-container {
+    min-height: 100%;
+    background-color: #f1f1f1;
+    font: 400 14px/1.5 Arial;
+    padding-top: 10px;
+    overflow: scroll;
+
+    .wall-container {
+      margin-top: 0;
+      margin-bottom: 0;
+      width: 100%;
+      position: relative;
+
+      .waterfall-list {
+        display: flex;
+        justify-content: space-around;
+        min-height: 99%;
+        list-style: none;
+        padding: 0;
+
+        .waterfall-list-column {
+          position: relative;
+          display: flex;
+          width: 46%;
+          height: .1rem;
+        }
+      }
+    }
+  }
+}
