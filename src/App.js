@@ -8,7 +8,7 @@ import Header from './component/header/Header';
 import FooterNav from './component/footer-nav/FooterNav';
 import ScrollToTop from './component/scroll-to-top/ScrollToTop';
 import History from './page/history/History';
-import Term from './component/term/Term';
+import Term from './page/term/Term';
 import Question from './page/question/Question';
 import Opinion from './page/opinion/Opinion';
 
