@@ -38,7 +38,7 @@ class Term extends Component {
                         className='fall-card'
                         key={item.id}
                         hoverable
-                        cover={<img src={require(`../../assets/img/${item.img}`)}/>}
+                        cover={<img src={require(`../../assets/img/${item.img}`)} alt='图片'/>}
                       >
                         <Meta title={item.title} description={item.detail}/>
                       </Card>
@@ -54,7 +54,7 @@ class Term extends Component {
                         className='fall-card'
                         key={item.id}
                         hoverable
-                        cover={<img src={require(`../../assets/img/${item.img}`)}/>}
+                        cover={<img src={require(`../../assets/img/${item.img}`)} alt='图片'/>}
                       >
                         <Meta title={item.title} description={item.detail}/>
                       </Card>
