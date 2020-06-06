@@ -51,5 +51,6 @@
   "devDependencies": {
     "react-redux": "^7.2.0",
     "react-router-config": "^5.1.1"
-  }
+  },
+  "proxy": "http://localhost:9988"
 }

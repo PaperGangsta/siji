@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import QuestionImg from '../../assets/img/siji_question.jpg';
-import {Rate, Form, Button, Input} from 'antd';
+import {Rate, Form, Button, Input, message} from 'antd';
+import {submitOpinion} from '../../api/opinion';
 import './style.less';
 
 // const pageTitle = {
@@ -12,9 +13,17 @@ const {TextArea} = Input;
 
 class Opinion extends Component {
 
-  onFinish = value => {
-    console.log(value);
+  onFinish = async value => {
+    const result = await submitOpinion(value);
+    const data = result.data;
+    console.log(data);
+    if (data.code == 0) {
+      message.success('提交成功');
+    } else {
+      message.error('服务器异常,提交失败');
+    }
   };
+
 
   render() {
     return (
@@ -30,20 +39,19 @@ class Opinion extends Component {
             <div className='opinion-card-form'>
               <Form
                 onFinish={this.onFinish}
-                initialValues={{rate: 4.5}}
+                initialValues={{score: 4.5}}
               >
                 <Form.Item
-                  name='assess'
+                  name='comment'
                 >
                   <TextArea
-                    onChange={this.onChange}
                     placeholder="欢迎您留下宝贵建议及意见,我们会认真听取您的想法,努力改进,变得更好!"
                     autoSize={{minRows: 6, maxRows: 10}}
                   />
                 </Form.Item>
                 <div className='rate-wrapper'>
                   <div className='opinion-rate'>服务评价:</div>
-                  <Form.Item name="rate">
+                  <Form.Item name="score">
                     <Rate/>
                   </Form.Item>
                 </div>

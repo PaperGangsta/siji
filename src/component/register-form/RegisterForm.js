@@ -18,8 +18,6 @@ class RegisterForm extends Component {
       return new Promise(((resolve, reject) => {
         reject('手机号格式有误');
       }));
-    } else {
-      // callback()
     }
   };
 

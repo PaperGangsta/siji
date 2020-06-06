@@ -1,4 +1,9 @@
-.detail-wrapper{
+.ant-timeline-item {
+  padding-top: 10px;
+  padding-bottom: 0 !important;
+}
+
+.detail-wrapper {
   padding: 44px 0 .5rem;
   clear: both;
 
@@ -43,12 +48,28 @@
     .detail-text {
       margin: .3rem 0;
 
+      .detail-tag {
+        wordBreak: 'break-all';
+        padding: .1rem;
+        padding-top: .3rem;
+      }
+
       p {
         font-size: 16px;
         line-height: 24px;
         color: #333;
         letter-spacing: 1px;
         text-align: justify;
+
+        strong {
+          font-weight: bolder;
+          word-break: break-all;
+          line-height: 1.2;
+        }
+
+        img {
+          width: 100%;
+        }
       }
     }
     .detail-item-time{

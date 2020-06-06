@@ -13,6 +13,9 @@ const text = `
 
 class QuestionCard extends Component {
   render() {
+
+    const {questionContent, questionTitle} = this.props;
+
     return (
       <div className='q-card-wrapper'>
         <Collapse
@@ -20,9 +23,9 @@ class QuestionCard extends Component {
           expandIcon={({isActive}) => <CaretRightOutlined rotate={isActive ? 90 : 0}/>}
           className="q-collapse site-collapse-custom-collapse"
         >
-          <Panel header="四季共享收费吗？" key="1" className="site-collapse-custom-panel">
+          <Panel header={questionTitle + '?'} key="1" className="site-collapse-custom-panel">
 
-            <p><Tag color="blue">{symbol}</Tag>{text}</p>
+            <p><Tag color="blue">{symbol}</Tag>{questionContent}</p>
           </Panel>
         </Collapse>
       </div>
