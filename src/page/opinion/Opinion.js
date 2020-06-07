@@ -13,12 +13,15 @@ const {TextArea} = Input;
 
 class Opinion extends Component {
 
+  formRef = React.createRef();
+
   onFinish = async value => {
     const result = await submitOpinion(value);
     const data = result.data;
     console.log(data);
     if (data.code == 0) {
       message.success('提交成功');
+      this.formRef.current.resetFields();
     } else {
       message.error('服务器异常,提交失败');
     }
@@ -40,6 +43,7 @@ class Opinion extends Component {
               <Form
                 onFinish={this.onFinish}
                 initialValues={{score: 4.5}}
+                ref={this.formRef}
               >
                 <Form.Item
                   name='comment'

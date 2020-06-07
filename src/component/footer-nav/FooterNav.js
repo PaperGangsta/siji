@@ -71,8 +71,8 @@ class FooterNav extends Component {
             <NavLink to='/question'>
               <div className='footer-nav-list-label'><span>常见问题</span></div>
             </NavLink>
-            <NavLink to='/oneToOne'>
-              <div className='footer-nav-list-label'><span>一对一咨询</span></div>
+            <NavLink to='/chat'>
+              <div className='footer-nav-list-label'><span>在线咨询</span></div>
             </NavLink>
             <NavLink to='/opinion'>
               <div className='footer-nav-list-label'><span>意见箱</span></div>
