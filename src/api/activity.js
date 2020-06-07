@@ -10,3 +10,14 @@ export function getNewActivity() {
     method: 'GET'
   });
 }
+
+export function addActivityApply(data) {
+  return request({
+    headers: {
+      'Content-Type': json
+    },
+    url: '/activity/apply',
+    method: 'POST',
+    data
+  });
+}

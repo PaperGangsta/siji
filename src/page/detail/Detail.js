@@ -52,7 +52,7 @@ class Detail extends Component {
           <div className='detail-register-title'>
             活动报名
           </div>
-          <RegisterForm/>
+          <RegisterForm activityId={data.id}/>
         </div>)}
 
       </div>
